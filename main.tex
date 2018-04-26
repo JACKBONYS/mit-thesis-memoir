@@ -26,6 +26,46 @@
 %% above. 
 
 \documentclass[letterpaper, twoside, onecolumn, 11pt, oldfontcommands]{mit-thesis-memoir}
+
+\usepackage{graphicx}
+\usepackage{epsfig}
+ 
+\usepackage{amsmath, amssymb, mathtools} % Math
+
+\maxtocdepth{subsection} % List subsections in TOC in addition to chapters and sections
+\setsecnumdepth{subsection} % Number subsections in TOC
+\renewcommand*{\cftappendixname}{Appendix\space}	% Write ``Appendix'' in the TOC
+
+\usepackage{float} % force figure placement
+
+\usepackage{caption}			% Figure caption formatting
+\captionsetup[figure]{labelfont={bf},textfont={}}	% bf, it
+\captionsetup[table]{labelfont={bf},textfont={}}	% bf, it
+
+% Personal favorite memoir chapter heading style
+\chapterstyle{ell}
+\renewcommand*{\chapnumfont}{\normalfont\HUGE\sffamily}
+\renewcommand*{\chaptitlefont}{\normalfont\huge\sffamily}
+
+\setulmarginsandblock{1in}{1in}{1} % Reduce top and bottom margins
+\setlrmarginsandblock{1.25in}{1in}{1} % Reduce left and right margins
+\checkandfixthelayout
+
+\usepackage{lmodern}		% Pretty font
+
+\usepackage[svgnames]{xcolor}
+\usepackage{pdfcolmk}
+
+% Links and link coloring
+\usepackage[backref=page]{hyperref}
+\hypersetup{
+    colorlinks=true,       % false: boxed links; true: colored links
+    linkcolor=red,          % color of internal links (change box color with linkbordercolor)
+    citecolor=magenta,	% color of links to bibliography (was originally green, but that's hard to read)
+    filecolor=cyan,	% color of file links
+    urlcolor=magenta	% color of external links
+}
+
 \usepackage{lgrind}
 %% These have been added at the request of the MIT Libraries, because
 %% some PDF conversions mess up the ligatures.  -LB, 1/22/2014
@@ -46,7 +86,7 @@
 \include{chap2}
 \appendix
 \include{appa}
-%\include{appb}
-%\include{biblio}
+\include{appb}
+\include{biblio}
 \end{document}
 
